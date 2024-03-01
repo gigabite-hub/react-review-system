@@ -1,8 +1,8 @@
 export type Testimonial = {
-  id: number;
+  // id: number;
   name: string;
-  designation: string;
-  content: string;
-  image: string;
+  address: string;
+  businessType: string;
+  phoneNumber: string;
   star: number;
 };

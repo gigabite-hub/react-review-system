@@ -31,6 +31,6 @@ export default function Home() {
       <Pricing />
       <Blog />
       <Contact />
-    </>
+</>
   );
 }
