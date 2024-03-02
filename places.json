@@ -1,239 +1,243 @@
 {
-    "places": [
+  "places": [
+    {
+      "placeID": 1,
+      "slug": "delicious-delights-cafe",
+      "name": "Delicious Delights Cafe",
+      "address": "789 Yummy Street, Foodville, Culinaryland",
+      "businessType": "Restaurant",
+      "reviews": [
         {
-            "placeID": 1,
-            "slug": "delicious-delights-cafe",
-            "name": "Delicious Delights Cafe",
-            "address": "789 Yummy Street, Foodville, Culinaryland",
-            "businessType": "Restaurant",
-            "reviews": [
-                {
-                    "user": {
-                        "username": "foodlover123",
-                        "age": 28,
-                        "avatar": "https://example.com/avatar3.jpg",
-                        "occupation": "Food Blogger"
-                    },
-                    "rating": 4.5,
-                    "comment": "Amazing food! Loved the ambiance."
-                },
-                {
-                    "user": {
-                        "username": "tasteexplorer",
-                        "age": 35,
-                        "avatar": "https://example.com/avatar3.jpg",
-                        "occupation": "Culinary Critic"
-                    },
-                    "rating": 5,
-                    "comment": "The best place in town for foodies!"
-                },
-                {
-                    "user": {
-                        "username": "culinarycritic",
-                        "age": 40,
-                        "avatar": "https://example.com/avatar3.jpg",
-                        "occupation": "Restaurant Reviewer"
-                    },
-                    "rating": 3.5,
-                    "comment": "Good, but could improve on service."
-                }
-            ],
-            "totalRatings": 1,
-            "phoneNumber": "+1 555-1111",
-            "sliderImages": [
-                "https://example.com/cafe_image1.jpg",
-                "https://example.com/cafe_image2.jpg",
-                "https://example.com/cafe_image3.jpg"
-            ],
-            "thumbnail": "https://example.com/cafe_thumbnail.jpg"
+          "user": {
+            "username": "foodlover123",
+            "age": 28,
+            "avatar": "https://example.com/avatar3.jpg",
+            "occupation": "Food Blogger"
+          },
+          "rating": 4.5,
+          "comment": "Amazing food! Loved the ambiance."
         },
         {
-            "placeID": 2,
-            "name": "TechHub Mall",
-            "slug": "techhub-mall",
-            "address": "123 Innovation Avenue, TechCity, Techland",
-            "businessType": "Shopping Mall",
-            "reviews": [
-                {
-                    "user": {
-                        "username": "shopaholic22",
-                        "age": 30,
-                        "avatar": "https://example.com/avatar3.jpg",
-                        "occupation": "Fashion Blogger"
-                    },
-                    "rating": 4,
-                    "comment": "Great variety of stores and brands!"
-                },
-                {
-                    "user": {
-                        "username": "gadgetguru",
-                        "age": 32,
-                        "avatar": "https://example.com/avatar3.jpg",
-                        "occupation": "Tech Enthusiast"
-                    },
-                    "rating": 4.5,
-                    "comment": "Love the tech stores here!"
-                },
-                {
-                    "user": {
-                        "username": "fashionista",
-                        "age": 28,
-                        "avatar": "https://example.com/avatar3.jpg",
-                        "occupation": "Fashion Designer"
-                    },
-                    "rating": 3,
-                    "comment": "Could use more high-end fashion stores."
-                }
-            ],
-            "totalRatings": 3,
-            "phoneNumber": "+1 555-2222",
-            "sliderImages": [
-                "https://example.com/cafe_image1.jpg",
-                "https://example.com/cafe_image2.jpg",
-                "https://example.com/cafe_image3.jpg"
-            ],
-            "thumbnail": "https://example.com/cafe_thumbnail.jpg"
+          "user": {
+            "username": "tasteexplorer",
+            "age": 35,
+            "avatar": "https://example.com/avatar3.jpg",
+            "occupation": "Culinary Critic"
+          },
+          "rating": 5,
+          "comment": "The best place in town for foodies!"
         },
         {
-            "placeID": 3,
-            "slug": "serene-spa-retreat",
-            "name": "Serene Spa Retreat",
-            "address": "456 Tranquil Lane, RelaxCity, Wellness World",
-            "businessType": "Spa",
-            "reviews": [
-                {
-                    "user": {
-                        "username": "stressfree23",
-                        "age": 35,
-                        "avatar": "https://example.com/avatar3.jpg",
-                        "occupation": "Yoga Instructor"
-                    },
-                    "rating": 5,
-                    "comment": "A blissful experience! Highly recommend."
-                },
-                {
-                    "user": {
-                        "username": "mindfulmeditator",
-                        "age": 40,
-                        "avatar": "https://example.com/avatar3.jpg",
-                        "occupation": "Mindfulness Coach"
-                    },
-                    "rating": 4,
-                    "comment": "Calming atmosphere, perfect for relaxation."
-                },
-                {
-                    "user": {
-                        "username": "wellnesswarrior",
-                        "age": 45,
-                        "avatar": "https://example.com/avatar3.jpg",
-                        "occupation": "Wellness Blogger"
-                    },
-                    "rating": 3.5,
-                    "comment": "Good, but expected more variety in treatments."
-                }
-            ],
-            "totalRatings": 2,
-            "phoneNumber": "+1 555-3333",
-            "sliderImages": [
-                "https://example.com/cafe_image1.jpg",
-                "https://example.com/cafe_image2.jpg",
-                "https://example.com/cafe_image3.jpg"
-            ],
-            "thumbnail": "https://example.com/cafe_thumbnail.jpg"
-        },
-        {
-            "placeID": 4,
-            "slug": "gadget-galaxy-electronics",
-            "name": "Gadget Galaxy Electronics",
-            "address": "987 Tech Street, GizmoCity, Techland",
-            "businessType": "Electronics Store",
-            "reviews": [
-                {
-                    "user": {
-                        "username": "techsavvyuser",
-                        "age": 28,
-                        "avatar": "https://example.com/avatar3.jpg",
-                        "occupation": "Tech Enthusiast"
-                    },
-                    "rating": 4.5,
-                    "comment": "Best place for the latest gadgets!"
-                },
-                {
-                    "user": {
-                        "username": "electronicsenthusiast",
-                        "age": 30,
-                        "avatar": "https://example.com/avatar3.jpg",
-                        "occupation": "Electronics Reviewer"
-                    },
-                    "rating": 4,
-                    "comment": "Wide range of products, competitive prices."
-                },
-                {
-                    "user": {
-                        "username": "gadgetgeek",
-                        "age": 25,
-                        "avatar": "https://example.com/avatar3.jpg",
-                        "occupation": "Software Developer"
-                    },
-                    "rating": 3,
-                    "comment": "Could improve on customer service."
-                }
-            ],
-            "totalRatings": 3,
-            "phoneNumber": "+1 555-4444",
-            "sliderImages": [
-                "https://example.com/cafe_image1.jpg",
-                "https://example.com/cafe_image2.jpg",
-                "https://example.com/cafe_image3.jpg"
-            ],
-            "thumbnail": "https://example.com/cafe_thumbnail.jpg"
-        },
-        {
-            "placeID": 5,
-            "slug": "green-oasis-park",
-            "name": "Green Oasis Park",
-            "address": "101 Nature Avenue, EcoCity, Sustainability Nation",
-            "businessType": "Park",
-            "reviews": [
-                {
-                    "user": {
-                        "username": "naturelover456",
-                        "age": 32,
-                        "avatar": "https://example.com/avatar3.jpg",
-                        "occupation": "Environmental Scientist"
-                    },
-                    "rating": 5,
-                    "comment": "A beautiful and peaceful escape!"
-                },
-                {
-                    "user": {
-                        "username": "ecowarrior22",
-                        "age": 28,
-                        "avatar": "https://example.com/avatar3.jpg",
-                        "occupation": "Environmental Activist"
-                    },
-                    "rating": 4,
-                    "comment": "Love the eco-friendly initiatives."
-                },
-                {
-                    "user": {
-                        "username": "outdooradventurer",
-                        "age": 30,
-                        "avatar": "https://example.com/avatar3.jpg",
-                        "occupation": "Adventure Blogger"
-                    },
-                    "rating": 3.5,
-                    "comment": "Nice park, but needs more recreational activities."
-                }
-            ],
-            "totalRatings": 3,
-            "phoneNumber": "+1 555-5555",
-            "sliderImages": [
-                "https://example.com/cafe_image1.jpg",
-                "https://example.com/cafe_image2.jpg",
-                "https://example.com/cafe_image3.jpg"
-            ],
-            "thumbnail": "https://example.com/cafe_thumbnail.jpg"
+          "user": {
+            "username": "culinarycritic",
+            "age": 40,
+            "avatar": "https://example.com/avatar3.jpg",
+            "occupation": "Restaurant Reviewer"
+          },
+          "rating": 3.5,
+          "comment": "Good, but could improve on service."
         }
-    ]
+      ],
+      "totalRatings": 1,
+      "phoneNumber": "+1 555-1111",
+      "sliderImages": [
+        "https://example.com/cafe_image1.jpg",
+        "https://example.com/cafe_image2.jpg",
+        "https://example.com/cafe_image3.jpg"
+      ],
+      "thumbnail": "https://example.com/cafe_thumbnail.jpg"
+    },
+    {
+      "placeID": 2,
+      "name": "TechHub Mall",
+      "slug": "techhub-mall",
+      "address": "123 Innovation Avenue, TechCity, Techland",
+      "businessType": "Shopping Mall",
+      "reviews": [
+        {
+          "user": {
+            "username": "shopaholic22",
+            "age": 30,
+            "avatar": "https://example.com/avatar3.jpg",
+            "occupation": "Fashion Blogger"
+          },
+          "rating": 4,
+          "comment": "Great variety of stores and brands!"
+        },
+        {
+          "user": {
+            "username": "gadgetguru",
+            "age": 32,
+            "avatar": "https://example.com/avatar3.jpg",
+            "occupation": "Tech Enthusiast"
+          },
+          "rating": 4.5,
+          "comment": "Love the tech stores here!"
+        },
+        {
+          "user": {
+            "username": "fashionista",
+            "age": 28,
+            "avatar": "https://example.com/avatar3.jpg",
+            "occupation": "Fashion Designer"
+          },
+          "rating": 3,
+          "comment": "Could use more high-end fashion stores."
+        }
+      ],
+      "totalRatings": 3,
+      "phoneNumber": "+1 555-2222",
+      "sliderImages": [
+        "https://example.com/cafe_image1.jpg",
+        "https://example.com/cafe_image2.jpg",
+        "https://example.com/cafe_image3.jpg"
+      ],
+      "thumbnail": "https://example.com/cafe_thumbnail.jpg"
+    },
+    {
+      "placeID": 3,
+      "slug": "serene-spa-retreat",
+      "name": "Serene Spa Retreat",
+      "address": "456 Tranquil Lane, RelaxCity, Wellness World",
+      "businessType": "Spa",
+      "reviews": [
+        {
+          "user": {
+            "username": "stressfree23",
+            "age": 35,
+            "avatar": "https://example.com/avatar3.jpg",
+            "occupation": "Yoga Instructor"
+          },
+          "rating": 5,
+          "comment": "A blissful experience! Highly recommend."
+        },
+        {
+          "user": {
+            "username": "mindfulmeditator",
+            "age": 40,
+            "avatar": "https://example.com/avatar3.jpg",
+            "occupation": "Mindfulness Coach"
+          },
+          "rating": 4,
+          "comment": "Calming atmosphere, perfect for relaxation."
+        },
+        {
+          "user": {
+            "username": "wellnesswarrior",
+            "age": 45,
+            "avatar": "https://example.com/avatar3.jpg",
+            "occupation": "Wellness Blogger"
+          },
+          "rating": 3.5,
+          "comment": "Good, but expected more variety in treatments."
+        }
+      ],
+      "totalRatings": 2,
+      "phoneNumber": "+1 555-3333",
+      "sliderImages": [
+        "https://example.com/cafe_image1.jpg",
+        "https://example.com/cafe_image2.jpg",
+        "https://example.com/cafe_image3.jpg"
+      ],
+      "thumbnail": "https://example.com/cafe_thumbnail.jpg"
+    },
+    {
+      "placeID": 4,
+      "slug": "gadget-galaxy-electronics",
+      "name": "Gadget Galaxy Electronics",
+      "address": "987 Tech Street, GizmoCity, Techland",
+      "businessType": "Electronics Store",
+      "reviews": [
+        {
+          "user": {
+            "username": "techsavvyuser",
+            "age": 28,
+            "avatar": "https://example.com/avatar3.jpg",
+            "occupation": "Tech Enthusiast"
+          },
+          "rating": 4.5,
+          "comment": "Best place for the latest gadgets!"
+        },
+        {
+          "user": {
+            "username": "electronicsenthusiast",
+            "age": 30,
+            "avatar": "https://example.com/avatar3.jpg",
+            "occupation": "Electronics Reviewer"
+          },
+          "rating": 4,
+          "comment": "Wide range of products, competitive prices."
+        },
+        {
+          "user": {
+            "username": "gadgetgeek",
+            "age": 25,
+            "avatar": "https://example.com/avatar3.jpg",
+            "occupation": "Software Developer"
+          },
+          "rating": 3,
+          "comment": "Could improve on customer service."
+        }
+      ],
+      "totalRatings": 3,
+      "phoneNumber": "+1 555-4444",
+      "sliderImages": [
+        "https://example.com/cafe_image1.jpg",
+        "https://example.com/cafe_image2.jpg",
+        "https://example.com/cafe_image3.jpg"
+      ],
+      "thumbnail": "https://example.com/cafe_thumbnail.jpg"
+    },
+    {
+      "placeID": 5,
+      "slug": "green-oasis-park",
+      "name": "Green Oasis Park",
+      "address": "101 Nature Avenue, EcoCity, Sustainability Nation",
+      "businessType": "Park",
+      "reviews": [
+        {
+          "user": {
+            "username": "naturelover456",
+            "age": 32,
+            "avatar": "https://example.com/avatar3.jpg",
+            "occupation": "Environmental Scientist"
+          },
+          "rating": 5,
+          "comment": "A beautiful and peaceful escape!"
+        },
+        {
+          "user": {
+            "username": "ecowarrior22",
+            "age": 28,
+            "avatar": "https://example.com/avatar3.jpg",
+            "occupation": "Environmental Activist"
+          },
+          "rating": 4,
+          "comment": "Love the eco-friendly initiatives."
+        },
+        {
+          "user": {
+            "username": "outdooradventurer",
+            "age": 30,
+            "avatar": "https://example.com/avatar3.jpg",
+            "occupation": "Adventure Blogger"
+          },
+          "rating": 3.5,
+          "comment": "Nice park, but needs more recreational activities."
+        }
+      ],
+      "totalRatings": 3,
+      "phoneNumber": "+1 555-5555",
+      "sliderImages": [
+        "https://example.com/cafe_image1.jpg",
+        "https://example.com/cafe_image2.jpg",
+        "https://example.com/cafe_image3.jpg"
+      ],
+      "thumbnail": "https://example.com/cafe_thumbnail.jpg"
+    },
+    {
+      "id": "db0d350c-fca3-41c5-85d6-61d7350f2c65",
+      "comment": "khjkh"
+    }
+  ]
 }

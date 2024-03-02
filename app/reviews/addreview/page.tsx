@@ -1,10 +1,28 @@
 "use client";
 import React from "react";
-import { useQuery } from "@tanstack/react-query";
-import { fetchPlaces } from "@/api/places";
+import { useMutation, useQueryClient } from "@tanstack/react-query"
+import { createReview } from "@/api/places";
 import Breadcrumb from "@/components/Common/Breadcrumb";
+import ReviewForm from "@/components/ReviewForm";
+import { v4 as uuidv4 } from 'uuid';
 
 const Page = () => {
+  const queryClient = useQueryClient();
+
+  const createPostMutation = useMutation({
+    mutationFn: createReview,
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ['addReview']});
+      console.log("success bro!")
+    }
+  });
+
+  const handleAddReview = (review) => {
+    createPostMutation.mutate({
+      id: uuidv4(),
+      ...review
+    })
+  }
 
   return (
     <>
@@ -14,9 +32,7 @@ const Page = () => {
       />
       <section className="dark:bg-bg-color-dark bg-gray-light relative z-10 py-16 md:py-20 lg:py-28">
         <div className="container">
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-              
-          </div>
+            <ReviewForm onSubmit={handleAddReview} initialValue={{}} />
         </div>
       </section>
     </>
