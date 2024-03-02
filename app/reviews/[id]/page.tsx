@@ -42,9 +42,12 @@ const Page: React.FC<ReviewsProps> = () => {
       console.log("Success!");
     },
   });
+  if (isLoading) return "Loading...";
+  const filteredReviews = reviews.filter((review) => review.slug === slug);
+  console.log(" ~ page ~ filteredReviews:", filteredReviews);
 
   const handleAddReview = (review) => {
-    const placeID = 1
+    const placeID = filteredReviews[0].placeID;
   
     createPostMutation.mutate({
       placeID,
@@ -54,12 +57,6 @@ const Page: React.FC<ReviewsProps> = () => {
       },
     });
   };
-  
-  if (isLoading) return "Loading...";
-
-  const filteredReviews = reviews.filter((review) => review.slug === slug);
-
-  console.log(" ~ page ~ filteredReviews:", filteredReviews);
 
   return (
     <>

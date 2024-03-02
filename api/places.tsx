@@ -12,4 +12,5 @@ export async function createReview({ placeID, newReview }) {
     body: JSON.stringify(newReview),
   });
   return response.json();
+  console.log("response", response.json())
 }

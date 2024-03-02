@@ -33,20 +33,6 @@ const ReviewForm = ({ onSubmit, initialValue }) => {
       />
     </div>
   );
-//   const renderSelect = (label) => (
-//     <div>
-//       <label
-//         htmlFor={label}
-//         className="mb-3 block text-sm font-medium text-dark dark:text-white"
-//       >
-//         {label}
-//       </label>
-//       <select onChange={handleChangeInput} name="" id="" className="border-stroke dark:text-body-color-dark dark:shadow-two w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:focus:border-primary dark:focus:shadow-none">
-//         <option value={label.toLowerCase()}>{review[label.toLowerCase()]}</option>
-//         <option value=""></option>
-//       </select>
-//     </div>
-//   );
   const renderTextArea = (label) => (
     <div>
       <label
@@ -67,6 +53,7 @@ const ReviewForm = ({ onSubmit, initialValue }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     onSubmit(review);
+    console.log("review", review);
     setReview({
         username: "",
         age: "",
