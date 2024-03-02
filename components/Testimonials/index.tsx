@@ -1,23 +1,6 @@
-import { Testimonial } from "@/types/testimonial";
 import SectionTitle from "../Common/SectionTitle";
-import SingleTestimonial from "./SingleTestimonial";
+import SingleTestimonial from "../SingleReview";
 
-const testimonialData: Testimonial[] = [
-  {
-    name: "TechGenius Academy",
-    address: "123 Code Street, DevCity, Techland",
-    businessType: "Technology School",
-    star:  2,
-    phoneNumber: "+1 555-1234"
-  },
-  {
-    name: "TechGenius Academy",
-    address: "123 Code Street, DevCity, Techland",
-    businessType: "Technology School",
-    star:  2,
-    phoneNumber: "+1 555-1234"
-  },
-];
 
 const Testimonials = () => {
   return (
@@ -30,9 +13,9 @@ const Testimonials = () => {
         />
 
         <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
-          {testimonialData.map((testimonial) => (
+          {/* {testimonialData.map((testimonial) => (
             <SingleTestimonial key={testimonial.name} testimonial={testimonial} />
-          ))}
+          ))} */}
         </div>
       </div>
       <div className="absolute right-0 top-5 z-[-1]">
