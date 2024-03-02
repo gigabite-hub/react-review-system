@@ -35,21 +35,26 @@ const Page: React.FC<ReviewsProps> = () => {
     queryFn: fetchPlaces,
   });
 
-  const createPostMutation = useMutation({
+  const createPostMutation = useMutation<any, Error, { placeID: any, newReview: any }>({
     mutationFn: createReview,
     onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: ['addReview']});
-      console.log("success bro!")
-    }
+      queryClient.invalidateQueries({ queryKey: ['addReview'] });
+      console.log("Success!");
+    },
   });
 
   const handleAddReview = (review) => {
+    const placeID = 1
+  
     createPostMutation.mutate({
-      id: uuidv4(),
-      ...review
-    })
-  }
-
+      placeID,
+      newReview: {
+        id: uuidv4(),
+        ...review,
+      },
+    });
+  };
+  
   if (isLoading) return "Loading...";
 
   const filteredReviews = reviews.filter((review) => review.slug === slug);
