@@ -1,8 +1,26 @@
+"use client";
+
+import React from "react";
+import { useQuery } from "@tanstack/react-query";
+import { fetchPlaces } from "@/api/places";
 import SectionTitle from "../Common/SectionTitle";
-import SingleTestimonial from "../SingleReview";
+import PlaceCard from '@/components/PlaceCard';
 
 
 const Testimonials = () => {
+  const {
+    isPending,
+    error,
+    data: places,
+    isLoading,
+  } = useQuery({
+    queryKey: ["places"],
+    queryFn: fetchPlaces,
+  });
+
+  if (isLoading) return "Loading...";
+  console.log("🚀 ~ page ~ companies:", places);
+
   return (
     <section className="dark:bg-bg-color-dark bg-gray-light relative z-10 py-16 md:py-20 lg:py-28">
       <div className="container">
@@ -13,9 +31,11 @@ const Testimonials = () => {
         />
 
         <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
-          {/* {testimonialData.map((testimonial) => (
-            <SingleTestimonial key={testimonial.name} testimonial={testimonial} />
-          ))} */}
+        {places?.map((item) => (
+              <div key={item.placeID}>
+             <PlaceCard {...item} />
+              </div>
+            ))}
         </div>
       </div>
       <div className="absolute right-0 top-5 z-[-1]">

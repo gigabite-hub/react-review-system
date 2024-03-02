@@ -17,8 +17,6 @@ const page = () => {
   });
 
   if (isLoading) return "Loading...";
-
-  if (error) return "An error has occurred: " + error.message;
   console.log("🚀 ~ page ~ companies:", places);
   return (
     <>

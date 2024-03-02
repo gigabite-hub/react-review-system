@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { Review, User } from "@/types/Review";
+import { Review } from "@/types/Review";
 import Image from "next/image";
 import Breadcrumb from "@/components/Common/Breadcrumb";
 import { useMutation, useQueryClient, useQuery } from "@tanstack/react-query"
@@ -48,7 +48,7 @@ const Page: React.FC<ReviewsProps> = () => {
 
   const handleAddReview = (review) => {
     const placeID = filteredReviews[0].placeID;
-  
+    console.log("placeID", placeID)
     createPostMutation.mutate({
       placeID,
       newReview: {
