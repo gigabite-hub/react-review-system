@@ -3,9 +3,12 @@ import React from "react";
 import { Review, User } from "@/types/Review";
 import Image from "next/image";
 import Breadcrumb from "@/components/Common/Breadcrumb";
-import { useQuery } from "@tanstack/react-query";
-import { fetchPlaces } from "@/api/places";
+import { useMutation, useQueryClient, useQuery } from "@tanstack/react-query"
+import { fetchPlaces, createReview } from "@/api/places";
 import { usePathname } from "next/navigation";
+import ReviewForm from "@/components/ReviewForm";
+import { v4 as uuidv4 } from 'uuid';
+import NewsLatterBox from "@/components/Contact/NewsLatterBox";
 
 const starIcon = (
   <svg width="18" height="16" viewBox="0 0 18 16" className="fill-current">
@@ -18,9 +21,10 @@ interface ReviewsProps {
 }
 
 const Page: React.FC<ReviewsProps> = () => {
+  const queryClient = useQueryClient();
   const pathname = usePathname();
   const slug = pathname.split("/").pop();
-  console.log("🚀 ~ slug:", slug);
+
   const {
     isPending,
     error,
@@ -30,6 +34,21 @@ const Page: React.FC<ReviewsProps> = () => {
     queryKey: ["reviews"],
     queryFn: fetchPlaces,
   });
+
+  const createPostMutation = useMutation({
+    mutationFn: createReview,
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ['addReview']});
+      console.log("success bro!")
+    }
+  });
+
+  const handleAddReview = (review) => {
+    createPostMutation.mutate({
+      id: uuidv4(),
+      ...review
+    })
+  }
 
   if (isLoading) return "Loading...";
 
@@ -84,6 +103,30 @@ const Page: React.FC<ReviewsProps> = () => {
           )}
         </div>
       </section>
+      <section  className="overflow-hidden py-16 md:py-20">
+      <div className="container">
+        <div className="-mx-4 flex flex-wrap">
+          <div className="w-full px-4 lg:w-7/12 xl:w-8/12">
+            <div
+              className="wow fadeInUp shadow-three dark:bg-gray-dark mb-12 rounded-sm bg-white px-8 py-11 sm:p-[55px] lg:mb-5 lg:px-8 xl:p-[55px]"
+              data-wow-delay=".15s
+              "
+            >
+              <h2 className="mb-3 text-2xl font-bold text-black dark:text-white sm:text-3xl lg:text-2xl xl:text-3xl">
+                Add Review
+              </h2>
+              <p className="mb-12 text-base font-medium text-body-color">
+                 Add your valuable comment!
+              </p>
+              <ReviewForm onSubmit={handleAddReview} initialValue={{}} />
+            </div>
+          </div>
+          <div className="w-full px-4 lg:w-5/12 xl:w-4/12">
+            <NewsLatterBox />
+          </div>
+        </div>
+      </div>
+    </section>
     </>
   );
 };

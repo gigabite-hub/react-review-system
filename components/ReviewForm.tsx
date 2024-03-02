@@ -1,21 +1,49 @@
-import { useState } from "react"
+import { useState } from "react";
 
 const ReviewForm = ({ onSubmit, initialValue }) => {
   const [review, setReview] = useState({
-    comment: initialValue.comment || ""
+    rating: initialValue.rating || "",
+    comment: initialValue.comment || "",
   });
 
   const handleChangeInput = (e) => {
     setReview({
       ...review,
-      [e.target.name]: e.target.value
-    })
-  }
+      [e.target.name]: e.target.value,
+    });
+  };
 
-  const renderField = (label) => (
+  const renderField = (label, type) => (
     <div>
-      <label>{label}</label>
-      <input onChange={handleChangeInput} type="text" name={label.toLowerCase()} value={review[label.toLowerCase()]} />
+      <label
+        htmlFor={label}
+        className="mb-3 block text-sm font-medium text-dark dark:text-white"
+      >
+        {label}
+      </label>
+      <input
+        onChange={handleChangeInput}
+        type={type}
+        name={label.toLowerCase()}
+        value={review[label.toLowerCase()]}
+        className="border-stroke dark:text-body-color-dark dark:shadow-two w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:focus:border-primary dark:focus:shadow-none"
+      />
+    </div>
+  );
+  const renderTextArea = (label) => (
+    <div>
+      <label
+        htmlFor={label}
+        className="mb-3 block text-sm font-medium text-dark dark:text-white"
+      >
+        {label}
+      </label>
+      <textarea
+        onChange={handleChangeInput}
+        name={label.toLowerCase()}
+        value={review[label.toLowerCase()]}
+        className="border-stroke dark:text-body-color-dark dark:shadow-two w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:focus:border-primary dark:focus:shadow-none"
+      ></textarea>
     </div>
   );
 
@@ -23,17 +51,28 @@ const ReviewForm = ({ onSubmit, initialValue }) => {
     e.preventDefault();
     onSubmit(review);
     setReview({
-      comment: ""
-    })
-
-  }
+      rating: "",
+      comment: "",
+    });
+  };
 
   return (
     <form onSubmit={handleSubmit}>
-      {renderField('Comment')}
-      <button type="submit">Submit</button>
+      <div className="flex flex-wrap">
+      <div className="w-full px-4 md:w-1/2">
+          <div className="mb-8">{renderField("Rating", "number")}</div>
+        </div>
+      </div>
+      <div className="w-full px-4">
+          <div className="mb-8">{renderTextArea("Comment")}</div>
+        </div>
+      <div className="w-full flex justify-end">
+        <button className="shadow-submit dark:shadow-submit-dark rounded-sm bg-primary px-9 py-4 text-base font-medium text-white duration-300 hover:bg-primary/90">
+          Submit Review
+        </button>
+      </div>
     </form>
-  )
-}
+  );
+};
 
-export default ReviewForm
+export default ReviewForm;
