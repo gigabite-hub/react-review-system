@@ -1,2 +1,7 @@
+/node_modules
+./build
+/.next/
+
 node_modules
-.next/
+build
+next

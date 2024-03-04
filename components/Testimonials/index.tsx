@@ -1,38 +1,26 @@
-import { Testimonial } from "@/types/testimonial";
-import SectionTitle from "../Common/SectionTitle";
-import SingleTestimonial from "./SingleTestimonial";
+"use client";
 
-const testimonialData: Testimonial[] = [
-  {
-    id: 1,
-    name: "Musharof Chy",
-    designation: "Founder @TailGrids",
-    content:
-      "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
-    image: "/images/testimonials/auth-01.png",
-    star: 5,
-  },
-  {
-    id: 2,
-    name: "Devid Weilium",
-    designation: "Founder @UIdeck",
-    content:
-      "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
-    image: "/images/testimonials/auth-02.png",
-    star: 5,
-  },
-  {
-    id: 3,
-    name: "Lethium Frenci",
-    designation: "Founder @Lineicons",
-    content:
-      "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
-    image: "/images/testimonials/auth-03.png",
-    star: 5,
-  },
-];
+import React from "react";
+import { useQuery } from "@tanstack/react-query";
+import { fetchPlaces } from "@/api/places";
+import SectionTitle from "../Common/SectionTitle";
+import PlaceCard from '@/components/PlaceCard';
+
 
 const Testimonials = () => {
+  const {
+    isPending,
+    error,
+    data: places,
+    isLoading,
+  } = useQuery({
+    queryKey: ["places"],
+    queryFn: fetchPlaces,
+  });
+
+  if (isLoading) return "Loading...";
+  console.log("🚀 ~ page ~ companies:", places);
+
   return (
     <section className="dark:bg-bg-color-dark bg-gray-light relative z-10 py-16 md:py-20 lg:py-28">
       <div className="container">
@@ -43,9 +31,11 @@ const Testimonials = () => {
         />
 
         <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
-          {testimonialData.map((testimonial) => (
-            <SingleTestimonial key={testimonial.id} testimonial={testimonial} />
-          ))}
+        {places?.map((item) => (
+              <div key={item.placeID}>
+             <PlaceCard {...item} />
+              </div>
+            ))}
         </div>
       </div>
       <div className="absolute right-0 top-5 z-[-1]">
