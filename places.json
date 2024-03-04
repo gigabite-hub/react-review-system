@@ -8,44 +8,33 @@
       "businessType": "Restaurant",
       "reviews": [
         {
-          "user": {
-            "username": "foodlover123",
-            "age": 28,
-            "avatar": "https://example.com/avatar3.jpg",
-            "occupation": "Food Blogger"
-          },
+          "username": "foodlover123",
+          "age": 28,
+          "avatar": "https://fastly.picsum.photos/id/669/500/300.jpg?hmac=bwbKCAx5EwHkIBcWq3Eu9TIPI_3hna5JDaVUDE9vMcM",
+          "occupation": "Food Blogger",
           "rating": 4.5,
           "comment": "Amazing food! Loved the ambiance."
         },
         {
-          "user": {
-            "username": "tasteexplorer",
-            "age": 35,
-            "avatar": "https://example.com/avatar3.jpg",
-            "occupation": "Culinary Critic"
-          },
+          "username": "tasteexplorer",
+          "age": 35,
+          "avatar": "https://fastly.picsum.photos/id/669/500/300.jpg?hmac=bwbKCAx5EwHkIBcWq3Eu9TIPI_3hna5JDaVUDE9vMcM",
+          "occupation": "Culinary Critic",
           "rating": 5,
           "comment": "The best place in town for foodies!"
         },
         {
-          "user": {
-            "username": "culinarycritic",
-            "age": 40,
-            "avatar": "https://example.com/avatar3.jpg",
-            "occupation": "Restaurant Reviewer"
-          },
+          "username": "culinarycritic",
+          "age": 40,
+          "avatar": "https://fastly.picsum.photos/id/669/500/300.jpg?hmac=bwbKCAx5EwHkIBcWq3Eu9TIPI_3hna5JDaVUDE9vMcM",
+          "occupation": "Restaurant Reviewer",
           "rating": 3.5,
           "comment": "Good, but could improve on service."
         }
       ],
       "totalRatings": 1,
       "phoneNumber": "+1 555-1111",
-      "sliderImages": [
-        "https://example.com/cafe_image1.jpg",
-        "https://example.com/cafe_image2.jpg",
-        "https://example.com/cafe_image3.jpg"
-      ],
-      "thumbnail": "https://example.com/cafe_thumbnail.jpg"
+      "thumbnail": "https://gravatar.com/avatar/7d649af07bd69689ac0663078ebd016b?s=400&d=robohash&r=x"
     },
     {
       "placeID": 2,
@@ -55,44 +44,33 @@
       "businessType": "Shopping Mall",
       "reviews": [
         {
-          "user": {
-            "username": "shopaholic22",
-            "age": 30,
-            "avatar": "https://example.com/avatar3.jpg",
-            "occupation": "Fashion Blogger"
-          },
+          "username": "shopaholic22",
+          "age": 30,
+          "avatar": "https://fastly.picsum.photos/id/669/500/300.jpg?hmac=bwbKCAx5EwHkIBcWq3Eu9TIPI_3hna5JDaVUDE9vMcM",
+          "occupation": "Fashion Blogger",
           "rating": 4,
           "comment": "Great variety of stores and brands!"
         },
         {
-          "user": {
-            "username": "gadgetguru",
-            "age": 32,
-            "avatar": "https://example.com/avatar3.jpg",
-            "occupation": "Tech Enthusiast"
-          },
+          "username": "gadgetguru",
+          "age": 32,
+          "avatar": "https://fastly.picsum.photos/id/669/500/300.jpg?hmac=bwbKCAx5EwHkIBcWq3Eu9TIPI_3hna5JDaVUDE9vMcM",
+          "occupation": "Tech Enthusiast",
           "rating": 4.5,
           "comment": "Love the tech stores here!"
         },
         {
-          "user": {
-            "username": "fashionista",
-            "age": 28,
-            "avatar": "https://example.com/avatar3.jpg",
-            "occupation": "Fashion Designer"
-          },
+          "username": "fashionista",
+          "age": 28,
+          "avatar": "https://fastly.picsum.photos/id/669/500/300.jpg?hmac=bwbKCAx5EwHkIBcWq3Eu9TIPI_3hna5JDaVUDE9vMcM",
+          "occupation": "Fashion Designer",
           "rating": 3,
           "comment": "Could use more high-end fashion stores."
         }
       ],
       "totalRatings": 3,
       "phoneNumber": "+1 555-2222",
-      "sliderImages": [
-        "https://example.com/cafe_image1.jpg",
-        "https://example.com/cafe_image2.jpg",
-        "https://example.com/cafe_image3.jpg"
-      ],
-      "thumbnail": "https://example.com/cafe_thumbnail.jpg"
+      "thumbnail": "https://gravatar.com/avatar/7d649af07bd69689ac0663078ebd016b?s=400&d=robohash&r=x"
     },
     {
       "placeID": 3,
@@ -102,44 +80,33 @@
       "businessType": "Spa",
       "reviews": [
         {
-          "user": {
-            "username": "stressfree23",
-            "age": 35,
-            "avatar": "https://example.com/avatar3.jpg",
-            "occupation": "Yoga Instructor"
-          },
+          "username": "stressfree23",
+          "age": 35,
+          "avatar": "https://fastly.picsum.photos/id/669/500/300.jpg?hmac=bwbKCAx5EwHkIBcWq3Eu9TIPI_3hna5JDaVUDE9vMcM",
+          "occupation": "Yoga Instructor",
           "rating": 5,
           "comment": "A blissful experience! Highly recommend."
         },
         {
-          "user": {
-            "username": "mindfulmeditator",
-            "age": 40,
-            "avatar": "https://example.com/avatar3.jpg",
-            "occupation": "Mindfulness Coach"
-          },
+          "username": "mindfulmeditator",
+          "age": 40,
+          "avatar": "https://fastly.picsum.photos/id/669/500/300.jpg?hmac=bwbKCAx5EwHkIBcWq3Eu9TIPI_3hna5JDaVUDE9vMcM",
+          "occupation": "Mindfulness Coach",
           "rating": 4,
           "comment": "Calming atmosphere, perfect for relaxation."
         },
         {
-          "user": {
-            "username": "wellnesswarrior",
-            "age": 45,
-            "avatar": "https://example.com/avatar3.jpg",
-            "occupation": "Wellness Blogger"
-          },
+          "username": "wellnesswarrior",
+          "age": 45,
+          "avatar": "https://fastly.picsum.photos/id/669/500/300.jpg?hmac=bwbKCAx5EwHkIBcWq3Eu9TIPI_3hna5JDaVUDE9vMcM",
+          "occupation": "Wellness Blogger",
           "rating": 3.5,
           "comment": "Good, but expected more variety in treatments."
         }
       ],
       "totalRatings": 2,
       "phoneNumber": "+1 555-3333",
-      "sliderImages": [
-        "https://example.com/cafe_image1.jpg",
-        "https://example.com/cafe_image2.jpg",
-        "https://example.com/cafe_image3.jpg"
-      ],
-      "thumbnail": "https://example.com/cafe_thumbnail.jpg"
+      "thumbnail": "https://gravatar.com/avatar/7d649af07bd69689ac0663078ebd016b?s=400&d=robohash&r=x"
     },
     {
       "placeID": 4,
@@ -149,44 +116,33 @@
       "businessType": "Electronics Store",
       "reviews": [
         {
-          "user": {
-            "username": "techsavvyuser",
-            "age": 28,
-            "avatar": "https://example.com/avatar3.jpg",
-            "occupation": "Tech Enthusiast"
-          },
+          "username": "techsavvyuser",
+          "age": 28,
+          "avatar": "https://fastly.picsum.photos/id/669/500/300.jpg?hmac=bwbKCAx5EwHkIBcWq3Eu9TIPI_3hna5JDaVUDE9vMcM",
+          "occupation": "Tech Enthusiast",
           "rating": 4.5,
           "comment": "Best place for the latest gadgets!"
         },
         {
-          "user": {
-            "username": "electronicsenthusiast",
-            "age": 30,
-            "avatar": "https://example.com/avatar3.jpg",
-            "occupation": "Electronics Reviewer"
-          },
+          "username": "electronicsenthusiast",
+          "age": 30,
+          "avatar": "https://fastly.picsum.photos/id/669/500/300.jpg?hmac=bwbKCAx5EwHkIBcWq3Eu9TIPI_3hna5JDaVUDE9vMcM",
+          "occupation": "Electronics Reviewer",
           "rating": 4,
           "comment": "Wide range of products, competitive prices."
         },
         {
-          "user": {
-            "username": "gadgetgeek",
-            "age": 25,
-            "avatar": "https://example.com/avatar3.jpg",
-            "occupation": "Software Developer"
-          },
+          "username": "gadgetgeek",
+          "age": 25,
+          "avatar": "https://fastly.picsum.photos/id/669/500/300.jpg?hmac=bwbKCAx5EwHkIBcWq3Eu9TIPI_3hna5JDaVUDE9vMcM",
+          "occupation": "Software Developer",
           "rating": 3,
           "comment": "Could improve on customer service."
         }
       ],
       "totalRatings": 3,
       "phoneNumber": "+1 555-4444",
-      "sliderImages": [
-        "https://example.com/cafe_image1.jpg",
-        "https://example.com/cafe_image2.jpg",
-        "https://example.com/cafe_image3.jpg"
-      ],
-      "thumbnail": "https://example.com/cafe_thumbnail.jpg"
+      "thumbnail": "https://gravatar.com/avatar/7d649af07bd69689ac0663078ebd016b?s=400&d=robohash&r=x"
     },
     {
       "placeID": 5,
@@ -196,44 +152,33 @@
       "businessType": "Park",
       "reviews": [
         {
-          "user": {
-            "username": "naturelover456",
-            "age": 32,
-            "avatar": "https://example.com/avatar3.jpg",
-            "occupation": "Environmental Scientist"
-          },
+          "username": "naturelover456",
+          "age": 32,
+          "avatar": "https://fastly.picsum.photos/id/669/500/300.jpg?hmac=bwbKCAx5EwHkIBcWq3Eu9TIPI_3hna5JDaVUDE9vMcM",
+          "occupation": "Environmental Scientist",
           "rating": 5,
           "comment": "A beautiful and peaceful escape!"
         },
         {
-          "user": {
-            "username": "ecowarrior22",
-            "age": 28,
-            "avatar": "https://example.com/avatar3.jpg",
-            "occupation": "Environmental Activist"
-          },
+          "username": "ecowarrior22",
+          "age": 28,
+          "avatar": "https://fastly.picsum.photos/id/669/500/300.jpg?hmac=bwbKCAx5EwHkIBcWq3Eu9TIPI_3hna5JDaVUDE9vMcM",
+          "occupation": "Environmental Activist",
           "rating": 4,
           "comment": "Love the eco-friendly initiatives."
         },
         {
-          "user": {
-            "username": "outdooradventurer",
-            "age": 30,
-            "avatar": "https://example.com/avatar3.jpg",
-            "occupation": "Adventure Blogger"
-          },
+          "username": "outdooradventurer",
+          "age": 30,
+          "avatar": "https://fastly.picsum.photos/id/669/500/300.jpg?hmac=bwbKCAx5EwHkIBcWq3Eu9TIPI_3hna5JDaVUDE9vMcM",
+          "occupation": "Adventure Blogger",
           "rating": 3.5,
           "comment": "Nice park, but needs more recreational activities."
         }
       ],
       "totalRatings": 3,
       "phoneNumber": "+1 555-5555",
-      "sliderImages": [
-        "https://example.com/cafe_image1.jpg",
-        "https://example.com/cafe_image2.jpg",
-        "https://example.com/cafe_image3.jpg"
-      ],
-      "thumbnail": "https://example.com/cafe_thumbnail.jpg"
+      "thumbnail": "https://gravatar.com/avatar/7d649af07bd69689ac0663078ebd016b?s=400&d=robohash&r=x"
     }
   ]
 }

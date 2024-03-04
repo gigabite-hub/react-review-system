@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ["localhost", "example.com", "plus.unsplash.com"],
+    domains: ["localhost", "fastly.picsum.photos", "gravatar.com"],
     remotePatterns: [
       {
         protocol: "https",
@@ -10,11 +10,11 @@ const nextConfig = {
       },
       {
         protocol: "https",
-        hostname: "example.com",
+        hostname: "fastly.picsum.photos",
       },
       {
         protocol: "https",
-        hostname: "plus.unsplash.com",
+        hostname: "gravatar.com",
       },
     ],
   },

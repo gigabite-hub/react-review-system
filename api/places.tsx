@@ -4,13 +4,42 @@ export async function fetchPlaces() {
     return response.json()
 }
 export async function createReview({ placeID, newReview }) {
-  const response = await fetch(`http://localhost:3000/places/${placeID}/reviews`, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(newReview),
-  });
-  return response.json();
-  console.log("response", response.json())
+  try {
+    // Fetch the specific place
+    const response = await fetch(`http://localhost:3000/places`);
+
+    if (!response.ok) {
+      throw new Error(`Failed to fetch place. Status: ${response.status}`);
+    }
+
+    const places = await response.json();
+   console.log("dfsf", places)
+ 
+    const updatedPlaces = places.map((place) =>
+    place.placeID === placeID
+      ? {
+          ...place,
+          reviews: [...place.reviews, newReview],
+        }
+      : place
+  );
+
+    // Send a PUT request to update the specific place
+    const updateResponse = await fetch(`http://localhost:3000/places/${placeID}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(updatedPlaces),
+    });
+
+    if (!updateResponse.ok) {
+      throw new Error(`Failed to update place. Status: ${updateResponse.status}`);
+    }
+
+    return updateResponse.json();
+  } catch (error) {
+    console.error("Error in createReview:", error);
+    throw error; // Rethrow the error to propagate it to the calling code
+  }
 }

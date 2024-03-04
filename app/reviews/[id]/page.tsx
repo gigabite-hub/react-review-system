@@ -28,7 +28,7 @@ const Page: React.FC<ReviewsProps> = () => {
   const {
     isPending,
     error,
-    data: reviews,
+    data: reviewsData,
     isLoading,
   } = useQuery({
     queryKey: ["reviews"],
@@ -43,20 +43,25 @@ const Page: React.FC<ReviewsProps> = () => {
     },
   });
   if (isLoading) return "Loading...";
-  const filteredReviews = reviews.filter((review) => review.slug === slug);
+  const filteredReviews = reviewsData.filter((review) => review.slug === slug);
   console.log(" ~ page ~ filteredReviews:", filteredReviews);
 
-  const handleAddReview = (review) => {
+  const handleAddReview = async (review) => {
     const placeID = filteredReviews[0].placeID;
-    console.log("placeID", placeID)
-    createPostMutation.mutate({
+    console.log("placeID", placeID);
+  
+    await createPostMutation.mutateAsync({
       placeID,
       newReview: {
         id: uuidv4(),
         ...review,
       },
     });
+
+    queryClient.invalidateQueries({ queryKey: ['reviews'] });
   };
+  
+  
 
   return (
     <>
@@ -82,14 +87,14 @@ const Page: React.FC<ReviewsProps> = () => {
                             <div className="mb-5 flex items-center space-x-1">    <span className="me-1">⭐</span> {review.rating}</div>
                         <div className="flex items-center">
                         <div className="relative mr-4 h-[50px] w-full max-w-[50px] overflow-hidden rounded-full">
-                                <Image src={review.user.avatar} alt={review.user.username} fill />
+                                <Image src={review.avatar} alt={review.username} fill />
                             </div>
                           <div className="w-full">
                             <h3 className="mb-1 text-lg font-semibold text-dark dark:text-white lg:text-base xl:text-lg">
-                              {review.user.username}
+                              {review.username}
                             </h3>
-                            <p className="text-sm text-body-color"><b>Occupation: </b> {review.user.occupation}</p>
-                            <p className="text-sm text-body-color"><b>Age: </b>{review.user.age}</p>
+                            <p className="text-sm text-body-color"><b>Occupation: </b> {review.occupation}</p>
+                            <p className="text-sm text-body-color"><b>Age: </b>{review.age}</p>
                           </div>
                         </div>
                       </div>
